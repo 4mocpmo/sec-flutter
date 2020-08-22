@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 
@@ -9,12 +10,12 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
-  SizedBox buildKey({Color color, int soundNumber}) {
+  SizedBox buildKey({Color color, int soundNumber ,String  txt}) {
     return SizedBox(
         height: 50,
         child: RaisedButton.icon(
+        label: Text(txt),
         icon:Icon(Icons.play_arrow , color: Colors.red[900],), 
-        label: Text('play'),
         onPressed: () {
           playSound(soundNumber);
         },
@@ -34,32 +35,44 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark(),
       home: Scaffold(
-        // appBar: AppBar( 
-        //   title: Center(
-        //     child: Text('my app')
-        //   ),
-        //   backgroundColor: Colors.blue[999],
-        // ),
-        backgroundColor: Colors.black87,
+        appBar: AppBar( 
+          actions: [
+            IconButton(
+              icon: Icon(Icons.dehaze , color: Colors.white),
+              onPressed: () => {},  
+            ),
+          ],
+          title: Center(
+            child: Text('          my app')
+          ),
+          backgroundColor: Colors.blue[999],
+        ),
+        backgroundColor: Colors.grey[700],
         body: new ListView(
           children: <Widget>[
-            buildKey(color: Colors.grey[850], soundNumber: 6),
-            buildKey(color: Colors.red , soundNumber: 5),
-            buildKey(color: Colors.red, soundNumber: 1),
-            buildKey(color: Colors.orange, soundNumber: 2),
-            buildKey(color: Colors.yellow, soundNumber: 3),
-            buildKey(color: Colors.green, soundNumber: 4),
-            buildKey(color: Colors.teal, soundNumber: 5),
-            buildKey(color: Colors.grey[850], soundNumber: 6),
-            buildKey(color: Colors.purple, soundNumber: 7),
-            buildKey(color: Colors.black, soundNumber: 1),
-            buildKey(color: Colors.purple[900], soundNumber: 7),
-            buildKey(color: Colors.green, soundNumber: 4),
-            buildKey(color: Colors.teal, soundNumber: 5),
-            buildKey(color: Colors.blue[900], soundNumber: 6),
-            buildKey(color: Colors.purple, soundNumber: 7),
-            buildKey(color: Colors.black, soundNumber: 1),
-            buildKey(color: Colors.purple[900], soundNumber: 7),
+            buildKey(color: Colors.grey[850], soundNumber: 8 , txt : '01.Hala Dari Miri'),
+            buildKey(color: Colors.red , soundNumber: 5, txt : 'play'),
+            buildKey(color: Colors.red, soundNumber: 1, txt : 'play'),
+            buildKey(color: Colors.orange, soundNumber: 2, txt : 'play'),
+            buildKey(color: Colors.yellow, soundNumber: 3, txt : 'play'),
+            buildKey(color: Colors.green, soundNumber: 4, txt : 'play'),
+            buildKey(color: Colors.teal, soundNumber: 5, txt : 'play'),
+            buildKey(color: Colors.grey[850], soundNumber: 6, txt : 'play'),
+            buildKey(color: Colors.purple, soundNumber: 7, txt : 'play'),
+            buildKey(color: Colors.black, soundNumber: 1, txt : 'play'),
+            buildKey(color: Colors.purple[900], soundNumber: 7, txt : 'play'),
+            buildKey(color: Colors.green, soundNumber: 4, txt : 'play'),
+            buildKey(color: Colors.teal, soundNumber: 5, txt : 'play'),
+            buildKey(color: Colors.blue[900], soundNumber: 6, txt : 'play'),
+            buildKey(color: Colors.purple, soundNumber: 7, txt : 'play'),
+            buildKey(color: Colors.black, soundNumber: 1, txt : 'play'),
+            buildKey(color: Colors.purple[900], soundNumber: 7, txt : 'play'),
+            buildKey(color: Colors.yellow, soundNumber: 3, txt : 'play'),
+            buildKey(color: Colors.green, soundNumber: 4, txt : 'play'),
+            buildKey(color: Colors.teal, soundNumber: 5, txt : 'play'),
+            buildKey(color: Colors.grey[850], soundNumber: 6, txt : 'play'),
+            buildKey(color: Colors.purple, soundNumber: 7, txt : 'play'),
+            buildKey(color: Colors.black, soundNumber: 1, txt : 'play'),
           ],
         ),
         // SafeArea(
