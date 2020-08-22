@@ -24,7 +24,7 @@ class XylophoneApp extends StatelessWidget {
           width: 1.5,
           style: BorderStyle.solid
         ), 
-        borderRadius: BorderRadius.circular(28)),
+        borderRadius: BorderRadius.circular(25)),
         color : color,
       )
     );
@@ -45,9 +45,8 @@ class XylophoneApp extends StatelessWidget {
           title: Center(
             child: Text('          my app')
           ),
-          backgroundColor: Colors.blue[999],
         ),
-        backgroundColor: Colors.grey[700],
+        backgroundColor: Colors.grey[900],
         body: new ListView(
           children: <Widget>[
             buildKey(color: Colors.grey[850], soundNumber: 8 , txt : '01.Hala Dari Miri'),
@@ -63,16 +62,13 @@ class XylophoneApp extends StatelessWidget {
             buildKey(color: Colors.purple[900], soundNumber: 7, txt : 'play'),
             buildKey(color: Colors.green, soundNumber: 4, txt : 'play'),
             buildKey(color: Colors.teal, soundNumber: 5, txt : 'play'),
-            buildKey(color: Colors.blue[900], soundNumber: 6, txt : 'play'),
-            buildKey(color: Colors.purple, soundNumber: 7, txt : 'play'),
-            buildKey(color: Colors.black, soundNumber: 1, txt : 'play'),
-            buildKey(color: Colors.purple[900], soundNumber: 7, txt : 'play'),
+            buildKey(color: Colors.red , soundNumber: 5, txt : 'play'),
+            buildKey(color: Colors.red, soundNumber: 1, txt : 'play'),
+            buildKey(color: Colors.orange, soundNumber: 2, txt : 'play'),
             buildKey(color: Colors.yellow, soundNumber: 3, txt : 'play'),
             buildKey(color: Colors.green, soundNumber: 4, txt : 'play'),
             buildKey(color: Colors.teal, soundNumber: 5, txt : 'play'),
             buildKey(color: Colors.grey[850], soundNumber: 6, txt : 'play'),
-            buildKey(color: Colors.purple, soundNumber: 7, txt : 'play'),
-            buildKey(color: Colors.black, soundNumber: 1, txt : 'play'),
           ],
         ),
         // SafeArea(
