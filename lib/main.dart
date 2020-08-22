@@ -23,7 +23,14 @@ class XylophoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
       home: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text('my app')
+          ),
+          backgroundColor: Colors.blue[999],
+        ),
         backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
@@ -34,8 +41,10 @@ class XylophoneApp extends StatelessWidget {
                 buildKey(color: Colors.yellow, soundNumber: 3),
                 buildKey(color: Colors.green, soundNumber: 4),
                 buildKey(color: Colors.teal, soundNumber: 5),
-                buildKey(color: Colors.blue, soundNumber: 6),
+                buildKey(color: Colors.blue[900], soundNumber: 6),
                 buildKey(color: Colors.purple, soundNumber: 7),
+                buildKey(color: Colors.black, soundNumber: 1),
+                buildKey(color: Colors.purple[900], soundNumber: 7),
               ],
           ),
         ),
